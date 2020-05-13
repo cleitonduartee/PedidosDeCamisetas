@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos Camisetas </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <header class="card">
+        <nav class="navbar  navbar-light " >
+            <div class="navbar-brand mx-auto" style="width: 50%; text-align: center;">
+                <h1 >Pedidos de Camisetas</h1>
+            </div>
+        </nav>
+    </header>
+    <main > 
+        <div class="border bg-light ">
+        <div class="container mt-2">
+        
+            <div class="row">
+                <div class="col-5">
+                    <label class="font-weight-bold">Cliente</label>
+                    <input class="form-control mx-auto    text-center " type="text" id="nome" placeholder="Nome">
+                </div>
+                <div class="col-sm">
+                    <label class="font-weight-bold">Tamanho P (R$ 10,00)</label>
+                    <input class="form-control mx-auto  text-center " type="number" id="qtdP" placeholder="Quantidade P">
+                </div>
+                <div class="col-sm">
+                    <label class="font-weight-bold">Tamanho M (R$ 12,00)</label>
+                    <input class="form-control mx-auto text-center" type="number" id="qtdM" placeholder="Quantidade M">
+                </div>
+                <div class="col-sm">
+                    <label class="font-weight-bold">Tamanho G (R$ 15,00)</label>
+                    <input class="form-control mx-auto text-center" type="number" id="qtdG" placeholder="Quantidade G">
+                </div>
+            </div>
+        </div> 
+       
+        <div class="container mt-4" id="msgErrors" style="display: none;">
+            <div class="alert alert-danger col-6 mx-auto text-center" role="alert">
+                <p class="font-italic" id="erros"></p>
+            </div>
+        </div> 
+             
+
+        <div class="container mt-3">
+            <div class="row mb-3">
+                <div class="mx-auto col-3"id="btnSave">
+                    <button class="btn btn-primary col-sm" type="button" onclick="save()">Salvar</button>
+                </div> 
+                <div class="mx-auto" id="btnUpadate"  style="display: none;" >
+                    <button class="btn btn-primary mx-1" type="button" onclick="saveUpdate()">Atualizar</button>
+                    <button class="btn btn-primary" type="button" onclick="cleanData()">Cancelar</button>
+                </div>               
+            </div>
+        </div>
+        </div>
+        
+        
+            
+        <div class=" mt-5">
+            <table class="table " id="tabelaa">
+               
+            </table>
+        </div>
+    </main>  
+   
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
